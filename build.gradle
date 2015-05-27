@@ -16,5 +16,3 @@ allprojects {
         jcenter()
     }
 }
-
-apply from: 'https://raw.github.com/koush/mvn-repo/master/maven.gradle'
