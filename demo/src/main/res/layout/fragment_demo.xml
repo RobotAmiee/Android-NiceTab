@@ -1,0 +1,80 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/demo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="?colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <FrameLayout
+        android:id="@+id/wrap_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/demo_toolbar">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <me.amiee.nicetab.NiceTabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:background="?colorPrimary"
+        app:ntlDividerPaddingLeft="8dp"
+        app:ntlDividerPaddingRight="8dp"
+        app:ntlIndicatorHeight="2dp"
+        app:ntlOverlayColor="#aa1a237e"
+        app:ntlTabMode="both"
+        app:ntlTextSize="@dimen/tab_title_text_size"
+        app:ntlTextStyle="normal"
+        app:ntlUnderlineHeight="1dp"/>
+
+    <!--<me.amiee.nicetab.NiceTabLayout-->
+    <!--android:id="@+id/sliding_tabs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/tab_height"-->
+    <!--android:background="?colorPrimary"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:paddingRight="8dp"-->
+    <!--app:ntlBadgeBackground="@color/primary_dark"-->
+    <!--app:ntlBadgeCornerRadius="12dp"-->
+    <!--app:ntlBadgeGravity="center_right"-->
+    <!--app:ntlBadgeHeight="24dp"-->
+    <!--app:ntlBadgeMarginLeft="8dp"-->
+    <!--app:ntlBadgeMaxWidth="36dp"-->
+    <!--app:ntlBadgeMinWidth="24dp"-->
+    <!--app:ntlDividerPaddingLeft="8dp"-->
+    <!--app:ntlDividerPaddingRight="16dp"-->
+    <!--app:ntlIconCrossFade="true"-->
+    <!--app:ntlIconTint="true"-->
+    <!--app:ntlIndicatorGravity="bottom"-->
+    <!--app:ntlIndicatorHeight="2dp"-->
+    <!--app:ntlShowDivider="true"-->
+    <!--app:ntlShowIndicator="true"-->
+    <!--app:ntlTabBackground="?selectableItemBackground"-->
+    <!--app:ntlTabColorBlendMode="defaultSelected"-->
+    <!--app:ntlTabDistributeEvenly="true"-->
+    <!--app:ntlTabMode="both"-->
+    <!--app:ntlTabOffset="0dp"-->
+    <!--app:ntlTabPaddingBottom="@dimen/tab_padding_top_bottom"-->
+    <!--app:ntlTabPaddingTop="@dimen/tab_padding_top_bottom"-->
+    <!--app:ntlTabSelectedCenter="false"-->
+    <!--app:ntlTextAllCaps="true"-->
+    <!--app:ntlTextSize="@dimen/tab_title_text_size"-->
+    <!--app:ntlTextStyle="normal"-->
+    <!--app:ntlUnderlineGravity="bottom"-->
+    <!--app:ntlUnderlineHeight="1dp"/>-->
+
+</RelativeLayout>

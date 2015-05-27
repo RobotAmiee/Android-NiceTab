@@ -1,0 +1,41 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_tab_color_blend_mode"
+        android:title="@string/tab_color_blend_mode"
+        android:orderInCategory="98"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/action_none"
+                  android:title="@string/none" />
+
+            <item android:id="@+id/action_default_selected"
+                  android:title="@string/default_selected" />
+
+            <item android:id="@+id/action_next_selected"
+                  android:title="@string/next_selected" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_tab_mode"
+        android:title="@string/tab_mode"
+        android:orderInCategory="99"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/action_title_only"
+                  android:title="@string/title_only" />
+
+            <item android:id="@+id/action_icon_only"
+                  android:title="@string/icon_only" />
+
+            <item android:id="@+id/action_both"
+                  android:title="@string/both" />
+        </menu>
+    </item>
+
+</menu>

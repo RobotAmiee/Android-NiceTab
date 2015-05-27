@@ -1,0 +1,12 @@
+<TextView
+    android:id="@+id/list_item_demo_title_tv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="?actionBarSize"
+    android:paddingLeft="@dimen/abc_action_bar_content_inset_material"
+    android:paddingRight="@dimen/abc_action_bar_content_inset_material"
+    android:textSize="@dimen/demo_item_title_text_size"
+    android:textColor="@color/demo_item_color"/>

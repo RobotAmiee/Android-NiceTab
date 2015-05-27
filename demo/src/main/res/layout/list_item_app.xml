@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/spacing"
+    android:paddingLeft="@dimen/abc_action_bar_content_inset_material"
+    android:paddingRight="@dimen/abc_action_bar_content_inset_material"
+    android:paddingTop="@dimen/spacing">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/list_item_app_icon_iv"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:layout_marginRight="@dimen/spacing"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@color/primary"
+        fresco:roundedCornerRadius="16dp"/>
+
+    <TextView
+        android:id="@+id/list_item_app_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/demo_item_color"
+        android:textSize="@dimen/demo_item_title_text_size"/>
+
+</LinearLayout>

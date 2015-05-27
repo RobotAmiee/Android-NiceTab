@@ -1,0 +1,119 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_draw_order"
+        android:title="@string/tab_draw_order"
+        android:orderInCategory="98"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/indicator_underline_divider"
+                  android:title="@string/indicatorUnderlineDivider" />
+
+            <item android:id="@+id/indicator_divider_underline"
+                  android:title="@string/indicatorDividerUnderline" />
+
+            <item android:id="@+id/underline_indicator_divider"
+                  android:title="@string/underlineIndicatorDivider" />
+
+            <item android:id="@+id/underline_divider_indicator"
+                  android:title="@string/underlineDividerIndicator" />
+
+            <item android:id="@+id/divider_indicator_underline"
+                  android:title="@string/dividerIndicatorUnderline" />
+
+            <item android:id="@+id/divider_underline_indicator"
+                  android:title="@string/dividerUnderlineIndicator" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_show_hide"
+        android:title="@string/show_hide"
+        android:orderInCategory="99"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/show_underline"
+                  android:title="@string/show_underline" />
+
+            <item android:id="@+id/hide_underline"
+                  android:title="@string/hide_underline" />
+
+            <item android:id="@+id/show_divider"
+                  android:title="@string/show_divider" />
+
+            <item android:id="@+id/hide_divider"
+                  android:title="@string/hide_divider" />
+
+            <item android:id="@+id/show_indicator"
+                  android:title="@string/show_indicator" />
+
+            <item android:id="@+id/hide_indicator"
+                  android:title="@string/hide_indicator" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_tab_layout"
+        android:title="@string/tab_layout"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/fit_content_width"
+                  android:title="@string/fit_content_width" />
+
+            <item android:id="@+id/distribute_evenly"
+                  android:title="@string/distribute_evenly" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_tab_selected_position"
+        android:title="@string/tab_selected_position"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/left"
+                  android:title="@string/left" />
+
+            <item android:id="@+id/center"
+                  android:title="@string/center" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_tab_badge"
+        android:title="@string/tab_badge"
+        android:orderInCategory="102"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/test_badge"
+                  android:title="@string/test_badge" />
+
+            <item android:id="@+id/clear_badge"
+                  android:title="@string/clear_badge" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_tab_icon_style"
+        android:title="@string/tab_icon_style"
+        android:orderInCategory="103"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/ios"
+                  android:title="@string/ios" />
+
+            <item android:id="@+id/android"
+                  android:title="@string/android" />
+        </menu>
+    </item>
+
+</menu>

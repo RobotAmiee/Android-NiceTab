@@ -1,0 +1,13 @@
+<resources>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="divider_color">#22000000</color>
+    <color name="demo_item_color">#333</color>
+    <color name="content_title_color">#99000000</color>
+
+    <color name="home">#4CAF50</color>
+    <color name="activity">#E91E63</color>
+    <color name="search">#2196F3</color>
+    <color name="me">#9C27B0</color>
+    <color name="coffee">#795548</color>
+</resources>

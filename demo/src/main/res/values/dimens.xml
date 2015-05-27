@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="spacing">8dp</dimen>
+    <dimen name="divider_height">1px</dimen>
+    <dimen name="demo_item_title_text_size">@dimen/abc_text_size_subhead_material</dimen>
+    <dimen name="tab_title_text_size">@dimen/abc_text_size_caption_material</dimen>
+    <dimen name="tab_padding_top_bottom">4dp</dimen>
+</resources>
