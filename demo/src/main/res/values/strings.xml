@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">NiceTab</string>
     <string name="github" translatable="false">GitHub</string>
-    <string name="github_url" translatable="false"><![CDATA[https://github.com/ogaclejapan/SmartTabLayout]]></string>
+    <string name="github_url" translatable="false"><![CDATA[https://github.com/RobotAmiee/Android-NiceTab]]></string>
     <string name="demo_title_basic">Basic</string>
     <string name="tab_home">Home</string>
     <string name="tab_activity">Activity</string>
