@@ -1,6 +1,8 @@
 # Android-NiceTab
 A nice tab to navigate between the different pages of a ViewPager
 
+![NiceTab Demo Gif](https://raw.githubusercontent.com/RobotAmiee/Android-NiceTab/master/art/demo.gif)
+
 # Usage
 
 *For a working implementation of this project see the `demo/` folder.*
