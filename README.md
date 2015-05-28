@@ -1,5 +1,5 @@
 # Android-NiceTab
-A nice tab to navigate between the different pages of a ViewPager
+A nice tab to navigate between the different pages of a ViewPager, supports badge, blur, and cross fade effect.
 
 ![NiceTab Demo Gif](https://raw.githubusercontent.com/RobotAmiee/Android-NiceTab/master/art/demo.gif)
 
