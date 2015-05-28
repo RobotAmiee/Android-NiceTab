@@ -7,7 +7,13 @@ A nice tab to navigate between the different pages of a ViewPager, supports badg
 
 *For a working implementation of this project see the `demo/` folder.*
 
-  1. Add the library as a project.
+  1. Add the library as a project. or just
+
+     ```groovy
+     dependencies {
+         compile 'me.amiee:nicetab:1.0.0'
+     }
+     ````
 
   2. Include the NiceTabLayout widget in your layout. This should usually be placed
      above the `ViewPager` it represents.
