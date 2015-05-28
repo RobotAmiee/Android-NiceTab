@@ -1,0 +1,9 @@
+<TextView
+    android:id="@+id/custom_tv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="@dimen/spacing"
+    android:paddingRight="@dimen/spacing"
+    android:textSize="@dimen/abc_text_size_subhead_material"/>

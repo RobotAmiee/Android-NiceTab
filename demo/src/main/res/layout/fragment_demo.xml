@@ -74,6 +74,8 @@
     <!--app:ntlTextAllCaps="true"-->
     <!--app:ntlTextSize="@dimen/tab_title_text_size"-->
     <!--app:ntlTextStyle="normal"-->
+    <!--app:ntlTabViewLayoutId="@layout/custom_tab"-->
+    <!--app:ntlTabViewTextOrImageViewId="@id/custom_tv"-->
     <!--app:ntlUnderlineGravity="bottom"-->
     <!--app:ntlUnderlineHeight="1dp"/>-->
 
