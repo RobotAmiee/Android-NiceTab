@@ -2,13 +2,13 @@ package me.amiee.nicetab;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -337,7 +337,7 @@ public class NiceTabLayout extends HorizontalScrollView {
     public void setViewPager(ViewPager viewPager) {
         mViewPager = viewPager;
         if (viewPager != null) {
-            viewPager.setOnPageChangeListener(new InternalViewPagerListener());
+            viewPager.addOnPageChangeListener(new InternalViewPagerListener());
             populateTabStrip();
         }
     }
@@ -598,7 +598,6 @@ public class NiceTabLayout extends HorizontalScrollView {
                     imageView.setBackgroundResource(outValue.resourceId);
                 }
 
-//                Drawable drawable = ContextCompat.getDrawable(getContext(), ((IconTabProvider) adapter).getPageIconResId(position)).mutate();
                 Drawable drawable = ContextCompat.getDrawable(getContext(), ((IconTabProvider) adapter).getPageIconResId(position));
 
                 if (mIconCrossFade && drawable instanceof StateListDrawable) {
@@ -610,10 +609,8 @@ public class NiceTabLayout extends HorizontalScrollView {
                         Drawable base = StateListDrawableHelper.getStateDrawable(stateListDrawable, baseIndex);
                         CrossFadeDrawable cd = new CrossFadeDrawable();
                         cd.setFading(fading);
-//                        tintDrawable(cd.getFading().mutate(), mTabColorize.getSelectedTabColor(position));
                         tintDrawable(cd.getFading(), mTabColorize.getSelectedTabColor(position));
                         cd.setBase(base);
-//                        tintDrawable(cd.getBase().mutate(), mTabColorize.getDefaultTabColor(position));
                         tintDrawable(cd.getBase(), mTabColorize.getDefaultTabColor(position));
                         imageView.setImageDrawable(cd);
                     } catch (Exception e) {
@@ -663,7 +660,6 @@ public class NiceTabLayout extends HorizontalScrollView {
 
                 textView.setPadding(mTabPaddingLeft, mTabPaddingTop, mTabPaddingRight, mTabPaddingBottom);
 
-//                Drawable drawable = ContextCompat.getDrawable(getContext(), ((IconTabProvider) adapter).getPageIconResId(position)).mutate();
                 Drawable drawable = ContextCompat.getDrawable(getContext(), ((IconTabProvider) adapter).getPageIconResId(position));
 
                 if (mIconCrossFade && drawable instanceof StateListDrawable) {
@@ -676,10 +672,8 @@ public class NiceTabLayout extends HorizontalScrollView {
                         CrossFadeDrawable cd = new CrossFadeDrawable();
                         cd.setFading(fading);
                         cd.setFading(fading);
-//                        tintDrawable(cd.getFading().mutate(), mTabColorize.getSelectedTabColor(position));
                         tintDrawable(cd.getFading(), mTabColorize.getSelectedTabColor(position));
                         cd.setBase(base);
-//                        tintDrawable(cd.getBase().mutate(), mTabColorize.getDefaultTabColor(position));
                         tintDrawable(cd.getBase(), mTabColorize.getDefaultTabColor(position));
                         textView.setCompoundDrawablesWithIntrinsicBounds(null, cd, null, null);
                     } catch (Exception e) {
@@ -761,11 +755,12 @@ public class NiceTabLayout extends HorizontalScrollView {
                 case ICON_ONLY: {
                     Drawable drawable = ((ImageView) view).getDrawable();
                     if (mIconCrossFade && drawable instanceof CrossFadeDrawable) {
-//                        tintDrawable(((CrossFadeDrawable) drawable).getFading().mutate(), mTabColorize.getSelectedTabColor(i));
                         tintDrawable(((CrossFadeDrawable) drawable).getFading(), mTabColorize.getSelectedTabColor(i));
-//                        tintDrawable(((CrossFadeDrawable) drawable).getBase().mutate(), mTabColorize.getDefaultTabColor(i));
                         tintDrawable(((CrossFadeDrawable) drawable).getBase(), mTabColorize.getDefaultTabColor(i));
                         crossFadeDrawable(drawable, i == selectedPosition ? 1f : 0f);
+                    } else {
+                        final int color = i == selectedPosition ? mTabColorize.getSelectedTabColor(i) : mTabColorize.getDefaultTabColor(i);
+                        tintDrawable(drawable, color);
                     }
                     break;
                 }
@@ -775,13 +770,10 @@ public class NiceTabLayout extends HorizontalScrollView {
 
                     Drawable drawable = ((TextView) view).getCompoundDrawables()[1];
                     if (mIconCrossFade && drawable instanceof CrossFadeDrawable) {
-//                        tintDrawable(((CrossFadeDrawable) drawable).getFading().mutate(), mTabColorize.getSelectedTabColor(i));
                         tintDrawable(((CrossFadeDrawable) drawable).getFading(), mTabColorize.getSelectedTabColor(i));
-//                        tintDrawable(((CrossFadeDrawable) drawable).getBase().mutate(), mTabColorize.getDefaultTabColor(i));
                         tintDrawable(((CrossFadeDrawable) drawable).getBase(), mTabColorize.getDefaultTabColor(i));
                         crossFadeDrawable(drawable, i == selectedPosition ? 1f : 0f);
                     } else {
-//                        tintDrawable(drawable.mutate(), color);
                         tintDrawable(drawable, color);
                     }
                     break;
@@ -1093,13 +1085,12 @@ public class NiceTabLayout extends HorizontalScrollView {
 
     private void tintDrawable(Drawable drawable, int color) {
         if (mIconTint) {
-            drawable = DrawableCompat.wrap(drawable);
-            DrawableCompat.setTint(drawable, color);
+            drawable.mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         }
     }
 
     private void crossFadeDrawable(Drawable drawable, float progress) {
-        CrossFadeDrawable cd = (CrossFadeDrawable) drawable;
+        CrossFadeDrawable cd = (CrossFadeDrawable) drawable.mutate();
         cd.setProgress(progress);
     }
 

@@ -99,7 +99,6 @@ public class DemoFragment extends Fragment {
         }
 
         Fragment createFragment() {
-//            return ContentFragment.newInstance(mTitle, mIndicatorColor, mDividerColor);
             return AppsFragment.newInstance();
         }
 
